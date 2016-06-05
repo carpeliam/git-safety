@@ -1,6 +1,6 @@
 {
   "name": "git-safety",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tells you how long it's been since the last merge conflict",
   "main": "retrieve-conflict.js",
   "scripts": {
