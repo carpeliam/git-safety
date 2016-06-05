@@ -4,6 +4,7 @@
   "description": "Tells you how long it's been since the last merge conflict",
   "main": "retrieve-conflict.js",
   "scripts": {
+    "version": "handlebars templates/ -m -f public/js/templates.js && git add public/js/templates.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": "carpeliam/git-safety",

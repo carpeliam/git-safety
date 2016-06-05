@@ -12,11 +12,9 @@ npm install git-safety
 
 ```
 var retrieveMergeConflictFor = require('git-safety');
-var args = process.argv.slice(2);
 
 retrieveMergeConflictFor('https://github.com/carpeliam/mergetest.git', 'master').then(function(commit) {
   if (commit) {
-    var numDays = moment().diff(commit.date(), 'days');
     console.log('conflict found: [', commit.sha(), 'on', commit.date(), ']');
   } else {
     console.log('no merge conflict detected');
