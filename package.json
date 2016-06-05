@@ -1,17 +1,22 @@
 {
   "name": "git-safety",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Tells you how long it's been since the last merge conflict",
-  "main": "index.js",
+  "main": "retrieve-conflict.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": "carpeliam/git-safety",
   "keywords": [
     "git"
   ],
   "author": "Liam Morley",
   "license": "ISC",
   "dependencies": {
+    "browserify-middleware": "^7.0.0",
+    "express": "^4.13.4",
+    "handlebars": "^4.0.5",
+    "isomorphic-fetch": "^2.2.1",
     "moment": "^2.13.0",
     "nodegit": "^0.13.0"
   }

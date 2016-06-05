@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Git Safety</title>
+  </head>
+  <body>
+    <h1>Git Safety</h1>
+    <form name="repoDetails">
+      <input type="text" name="url" required placeholder="https://github.com/carpeliam/mergetest">
+      <input type="text" name="branch" placeholder="master">
+      <input type="submit">
+    </form>
+    <div id="output"></div>
+    <script src="/js/vendor/handlebars.runtime.min.js"></script>
+    <script src="/js/templates/conflict-found.js"></script>
+    <script src="/js/client.js"></script>
+  </body>
+</html>
