@@ -26,7 +26,7 @@ retrieveMergeConflictFor('https://github.com/carpeliam/mergetest.git', 'master')
 
 ```
 npm install
-npm start
+PORT=3456 npm start
 ```
 
-An express app will run on port 3000.
+An express app will run on port 3000 by default.

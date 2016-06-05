@@ -23,11 +23,6 @@ app.use('/js', browserify(__dirname + '/clientjs'));
 app.use('/js/vendor', express.static('node_modules/handlebars/dist/'));
 app.use(express.static('public'));
 
-app.listen(3000, function () {
-  console.log('app listening on port 3000!');
+var server = app.listen(process.env.PORT || 3000, function () {
+  console.log('app listening on port ' + server.address().port + '!');
 });
-
-
-
-
-
