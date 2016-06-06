@@ -1,3 +1,9 @@
-<div>
-  It's been {{numDays}} days since the last merge conflict.
+<div class="row">
+  <div class="col-lg-8 col-lg-offset-1">
+    <div class="conflict-notice text-center lead">
+      <div class="conflict-notice-headline">It's been</div>
+      <div class="conflict-notice-body"><span class="day-count {{dayCountClass}}">{{numDays}}</span> days</div>
+      <div class="conflict-notice-footer">since the last merge conflict</div>
+    </div>
+  </div>
 </div>

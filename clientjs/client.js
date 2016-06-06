@@ -12,11 +12,21 @@ form.onsubmit = function(event) {
         console.error(new Error(data.error.message));
         document.getElementById('output').innerText = data.error.message;
       } else if (data.conflict) {
+        var numDays = moment().diff(data.conflict.date, 'days');
+        var dayCountClass;
+        if (numDays < 7) {
+          dayCountClass = 'text-danger';
+        } else if (numDays < 30) {
+          dayCountClass = 'text-warning';
+        } else {
+          dayCountClass = 'text-success';
+        }
         document.getElementById('output').innerHTML = Handlebars.templates.conflictFound({
-          numDays: moment().diff(data.conflict.date, 'days')
+          numDays: numDays,
+          dayCountClass: dayCountClass
         });
       } else {
-        document.getElementById('output').innerText = 'No conflicts found!';
+        document.getElementById('output').innerText = 'No conflicts found. Congratulations!';
       }
     });
   });

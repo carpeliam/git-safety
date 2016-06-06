@@ -2,15 +2,26 @@
 <html>
   <head>
     <title>Git Safety</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
   </head>
   <body>
-    <h1>Git Safety</h1>
-    <form name="repoDetails">
-      <input type="text" name="url" required placeholder="https://github.com/carpeliam/mergetest">
-      <input type="text" name="branch" placeholder="master">
-      <input type="submit">
-    </form>
-    <div id="output"></div>
+    <div class="container">
+      <h1>Git Safety</h1>
+      <form name="repoDetails" class="form-inline">
+        <div class="form-group">
+          <label for="gitUrl">Git URL</label>
+          <input type="text" name="url" class="form-control" id="gitUrl" placeholder="https://github.com/carpeliam/mergetest">
+        </div>
+        <div class="form-group">
+          <label for="gitBranch">Branch</label>
+          <input type="text" name="branch" class="form-control" id="gitBranch" placeholder="master">
+        </div>
+        <button type="submit" class="btn btn-default">Check</button>
+      </form>
+      <div id="output"></div>
+    </div>
     <script src="/js/vendor/handlebars.runtime.min.js"></script>
     <script src="/js/templates.js"></script>
     <script src="/js/client.js"></script>
