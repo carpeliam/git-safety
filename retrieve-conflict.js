@@ -19,11 +19,11 @@ module.exports = function retrieveMergeConflictFor(repositoryLocation, branch) {
       history.on('commit', function(commit) {
         if (commit.parentcount() > 1) {
           commit.getParents().then(function(commits) {
-            Git.Merge.commits(repo, commits[0], commits[1]).then(function(index) {
-              if (index.hasConflicts()) {
-                resolve(commit);
-              }
-            });
+            return Git.Merge.commits(repo, commits[0], commits[1]);
+          }).then(function(index) {
+            if (index.hasConflicts()) {
+              resolve(commit);
+            }
           }).catch(reject);
         }
       });
